@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    
+    <div class="main-contaner">
+        <div class="title">
+            <h1> Form Validation</h1>
+        </div>
+
+        <form class="form-contaner">
+            <div class="fullname">
+                <label for="name">Full Name</label>
+                <input type="text" required placeholder="Full Name" id="name" minlength="3" maxlength="50" name="name">
+            </div>
+
+            <div class="phone-number">
+                <label for="phone-number">Phone Number</label>
+                <input type="tel" required placeholder="999-999-9999" id="phone-number" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+            </div>
+
+            <div class="email">
+                <label for="email-ad">Email Address</label>
+                <input type="email" required placeholder="something@gmail.com" id="email-ad" name="email">
+            </div>
+
+            <div class="website">
+                <label for="website-url">Website URL </label>
+                <input type="url" required placeholder="https://someone.com" id="website-url" name="website">
+            </div>
+
+            <div class="password">
+                <label for="password">Password</label>
+                <input type="password" required placeholder="Create Password (Min. 8 characters)" id="password" 
+                    pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+                    pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" name="password"
+                    title="Please include at least 1 uppercase character, 1 lowercase character and one number.">
+            </div>
+
+            <div class="confirm-password">
+                <label for="password">Confirm Password</label>
+                <input type="password" required placeholder="Confirm Password" id="password-confirm" 
+                    pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" 
+                    title="Please include at least 1 uppercase character, 1 lowercase character and one number.">
+            </div>
+
+            <div class="submit-contaner">
+                <input type="submit" value="Register" class="submit">
+            </div>
+        </form>
+
+                    
+        <div class="message-container">
+            <h3 class="message">Don't Hesitate!</h3>
+        </div>
+    </div>
+    
+</body>
+</html>
